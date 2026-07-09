@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Hamdia Saleem — Frontend Web Developer and CS student based in Multan, Pakistan. Building clean, responsive interfaces with HTML, CSS, JavaScript, and React.">
+  <title>Hamdia Saleem | Frontend Web Developer</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Outfit:wght@600;700;800&display=swap">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════
+       NAV
+  ══════════════════════════════════════════ -->
+  <header>
+    <div class="container nav-container">
+      <a href="#home" class="logo">Hamdia Saleem</a>
+
+      <nav class="nav-menu" id="nav-menu" aria-label="Primary navigation">
+        <a href="#home"     class="nav-link active" id="nav-home">Home</a>
+        <a href="#about"    class="nav-link"         id="nav-about">About</a>
+        <a href="#skills"   class="nav-link"         id="nav-skills">Skills</a>
+        <a href="#projects" class="nav-link"         id="nav-projects">Projects</a>
+        <a href="#contact"  class="nav-link"         id="nav-contact">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#contact" class="btn btn-primary nav-cta">Get In Touch</a>
+
+        <div class="social-links nav-social">
+          <a href="https://www.linkedin.com/in/hamdiaawan" target="_blank" rel="noopener noreferrer"
+             class="social-icon" aria-label="LinkedIn profile">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0
+                5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966
+                0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784
+                1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586
+                7-2.777 7 2.476v6.759z"/>
+            </svg>
+          </a>
+          <a href="https://github.com/hamdiaawan" target="_blank" rel="noopener noreferrer"
+             class="social-icon" aria-label="GitHub profile">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+            </svg>
+          </a>
+        </div>
+
+        <button class="menu-toggle" id="menu-toggle"
+                aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ══════════════════════════════════════════
+         HERO — split screen
+    ══════════════════════════════════════════ -->
+    <section id="home" class="hero">
+      <div class="hero-grid">
+
+        <!-- LEFT: Photo panel -->
+        <div class="hero-photo-panel" id="hero-photo-panel">
+
+          <!-- Initials fallback — shown when profile.jpg hasn't loaded -->
+          <div class="hero-photo-fallback" aria-hidden="true">
+            HS
+            <span>Hamdia Saleem</span>
+          </div>
+
+          <!--
+            PHOTO: place your file at  assets/profile.jpg
+            (same folder as index.html — e.g. portfolio/assets/profile.jpg)
+          -->
+          <img
+            src="assets/profile.jpg"
+            alt="Hamdia Saleem"
+            class="hero-photo"
+            width="580"
+            height="760"
+            loading="eager"
+            id="hero-photo-img"
+          >
+        </div>
+
+        <!-- RIGHT: Content -->
+        <div class="hero-content">
+
+          <!-- Open-to-work badge -->
+          <div class="hero-open-badge" aria-label="Availability: open to remote and hybrid opportunities">
+            <span class="hero-open-dot" aria-hidden="true"></span>
+            Open to remote &amp; hybrid opportunities
+          </div>
+
+          <!-- Name (typing animation target) -->
+          <h1 class="hero-title" id="typing-hero-title">Hamdia Saleem</h1>
+
+          <!-- Role tagline -->
+          <p class="hero-tagline">Frontend Web Developer</p>
+
+          <!-- Personal line -->
+          <p class="hero-personal-line">Turning ideas into clean, responsive interfaces.</p>
+
+          <!-- Location -->
+          <p class="hero-location">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+            </svg>
+            Multan, Pakistan
+          </p>
+
+          <!-- Status -->
+          <p class="hero-status">
+            Frontend Intern @ <strong>Safex Solution</strong> &middot; Open to remote &amp; hybrid opportunities
+          </p>
+
+          <!-- Tech stack pills -->
+          <div class="hero-stack" aria-label="Core tech stack">
+            <span class="hero-stack-pill">HTML5</span>
+            <span class="hero-stack-pill">CSS3</span>
+            <span class="hero-stack-pill">JavaScript</span>
+            <span class="hero-stack-pill">React</span>
+            <span class="hero-stack-pill">Node.js</span>
+          </div>
+
+          <!-- CTAs -->
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">View Projects</a>
+            <a href="#contact"  class="btn btn-secondary">Get In Touch</a>
+          </div>
+
+        </div><!-- /hero-content -->
+      </div><!-- /hero-grid -->
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         ABOUT
+    ══════════════════════════════════════════ -->
+    <section id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Background</span>
+          <h2 class="section-title">About &amp; Currently</h2>
+        </div>
+
+        <div class="about-grid">
+
+          <!-- Left: bio + highlights -->
+          <div class="about-bio">
+            <p>
+              Computer Science student (7th semester) at MNS University of Agriculture, Multan.
+              Currently doing a Frontend Web Development internship at Safex Solution, and also
+              volunteering with Al-Khidmat Foundation.
+            </p>
+            <p>
+              Comfortable with HTML, CSS, JavaScript, React, and Node.js, with a growing focus on
+              writing clean code and building interfaces that feel considered, not just functional.
+            </p>
+
+            <!-- Highlights -->
+            <div class="highlights">
+              <h3 class="highlights-title">Quick Facts</h3>
+              <ul class="highlights-grid">
+
+                <li class="highlight-card">
+                  <span class="highlight-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                         stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                      <circle cx="9" cy="7" r="4"/>
+                      <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                      <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                    </svg>
+                  </span>
+                  <div class="highlight-content">
+                    <span class="highlight-label">Character Building Society</span>
+                    <p class="highlight-text">
+                      Active member of the CBS Society at MNS University of Agriculture, Multan —
+                      helping organize campus events including the Traffic Awareness Session
+                      with National Highways &amp; Motorway Police.
+                    </p>
+                  </div>
+                </li>
+
+                <li class="highlight-card">
+                  <span class="highlight-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                         stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="12" cy="8" r="6"/>
+                      <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/>
+                    </svg>
+                  </span>
+                  <div class="highlight-content">
+                    <span class="highlight-label">Certificates</span>
+                    <ul class="highlight-list">
+                      <li>Certificate of Recognition — Traffic Awareness Session (May 2024), MNSUA × Highway Police × CBS</li>
+                      <li>Certificate of Organizing — South Punjab Quiz Competition 2026 (<em>Khazeena-e-Ilm</em>), CBS WUM × CBS MNSUA</li>
+                    </ul>
+                  </div>
+                </li>
+
+                <li class="highlight-card highlight-card--wide">
+                  <span class="highlight-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                         stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="16 18 22 12 16 6"/>
+                      <polyline points="8 6 2 12 8 18"/>
+                    </svg>
+                  </span>
+                  <div class="highlight-content">
+                    <span class="highlight-label">Currently Learning</span>
+                    <p class="highlight-text">
+                      Strengthening React and Node.js skills through my Frontend Web Development
+                      internship at Safex Solution — working with production code and real design specs.
+                    </p>
+                  </div>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+
+          <!-- Right: timeline -->
+          <div class="timeline" aria-label="Current roles and education">
+
+            <div class="timeline-item">
+              <div class="timeline-date">Present</div>
+              <div class="timeline-title">Frontend Web Development Intern</div>
+              <div class="timeline-org">Safex Solution</div>
+              <p class="timeline-desc">
+                Building responsive layouts, translating design specs into semantic markup, and
+                refining component structure in production code. Deepening React and Node.js through
+                live project work.
+              </p>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-date">Present</div>
+              <div class="timeline-title">Volunteer</div>
+              <div class="timeline-org">Al-Khidmat Foundation</div>
+              <p class="timeline-desc">
+                Contributing to community initiatives alongside my internship — keeping perspective
+                on work that matters beyond the screen.
+              </p>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-date">Expected 2027</div>
+              <div class="timeline-title">BS Computer Science</div>
+              <div class="timeline-org">MNS University of Agriculture, Multan</div>
+              <p class="timeline-desc">
+                7th semester — foundations in software engineering, algorithms, and databases.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         SKILLS
+    ══════════════════════════════════════════ -->
+    <section id="skills">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Toolkit</span>
+          <h2 class="section-title">Skills</h2>
+        </div>
+
+        <ul class="skills-list" aria-label="Technical skills">
+          <li class="skill-item">HTML5</li>
+          <li class="skill-item">CSS3</li>
+          <li class="skill-item">JavaScript</li>
+          <li class="skill-item">React</li>
+          <li class="skill-item">Node.js</li>
+          <li class="skill-item">Git / GitHub</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         PROJECTS
+    ══════════════════════════════════════════ -->
+    <section id="projects">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Selected Work</span>
+          <h2 class="section-title">Projects</h2>
+        </div>
+
+        <div class="projects-grid">
+
+          <!-- Project 1: Portfolio -->
+          <article class="project-card">
+            <header class="project-meta">
+              <span class="project-type-tag">Web</span>
+              <h3 class="project-title">Personal Portfolio Website</h3>
+              <div class="project-tags">
+                <span class="project-tag">HTML5</span>
+                <span class="project-tag">CSS3</span>
+                <span class="project-tag">JavaScript</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/hamdiaawan/Portfolio"
+                   target="_blank" rel="noopener noreferrer"
+                   class="btn btn-secondary">View Code</a>
+                <a href="https://portfolio-iota-liart-73.vercel.app/"
+                   target="_blank" rel="noopener noreferrer"
+                   class="btn btn-primary">Live Site</a>
+              </div>
+            </header>
+
+            <div class="project-details">
+              <div class="case-study-step">
+                <div class="case-study-label">What it does</div>
+                <p class="case-study-text">
+                  A hand-coded portfolio focused on typography, layout rhythm, and subtle interaction —
+                  including a typing animation in the hero and tab-style file navigation.
+                </p>
+              </div>
+              <div class="case-study-step">
+                <div class="case-study-label">Key decision</div>
+                <p class="case-study-text">
+                  Treated design and engineering as one process: chose a restrained palette, defined
+                  a type scale first, then built layout around that hierarchy rather than filling a template.
+                </p>
+              </div>
+              <div class="case-study-step">
+                <div class="case-study-label">What I learned</div>
+                <p class="case-study-text">
+                  How spacing, font pairing, and small motion details shape first impressions — and
+                  that good frontend work is as much about restraint as it is about features.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: AI Image Tool -->
+          <article class="project-card">
+            <header class="project-meta">
+              <span class="project-type-tag">Web Development</span>
+              <h3 class="project-title">AI Powered Image Processing Tool</h3>
+              <div class="project-tags">
+                <span class="project-tag">Web API</span>
+                <span class="project-tag">AI Integration</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/hamdiaawan/Ai-Image-Processkng-tool"
+                   target="_blank" rel="noopener noreferrer"
+                   class="btn btn-primary">View Documentation</a>
+              </div>
+            </header>
+
+            <div class="project-details">
+              <div class="case-study-step">
+                <div class="case-study-label">What it does</div>
+                <p class="case-study-text">
+                  A web-based tool that applies AI-driven image processing — letting users upload
+                  images and run automated transformations through a browser interface.
+                </p>
+              </div>
+              <div class="case-study-step">
+                <div class="case-study-label">Key decision</div>
+                <p class="case-study-text">
+                  Structured the repo around clear documentation and visual walkthroughs, since the
+                  project spans API integration steps that are easier to follow with screenshots
+                  than raw code alone.
+                </p>
+              </div>
+              <div class="case-study-step">
+                <div class="case-study-label">What I learned</div>
+                <p class="case-study-text">
+                  How to plan an AI-powered workflow from the browser side — handling uploads,
+                  communicating with processing endpoints, and documenting for future readers.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: Password Manager -->
+          <article class="project-card">
+            <header class="project-meta">
+              <span class="project-type-tag project-type-tag--desktop">Desktop App</span>
+              <h3 class="project-title">Password Manager</h3>
+              <div class="project-tags">
+                <span class="project-tag">C#</span>
+                <span class="project-tag">WinForms</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/hamdiaawan/Password-Manager"
+                   target="_blank" rel="noopener noreferrer"
+                   class="btn btn-secondary">View Code</a>
+              </div>
+            </header>
+
+            <div class="project-details">
+              <div class="case-study-step">
+                <div class="case-study-label">What it does</div>
+                <p class="case-study-text">
+                  A secure desktop application for storing and managing passwords locally —
+                  built with C# and WinForms rather than a web stack.
+                </p>
+              </div>
+              <div class="case-study-step">
+                <div class="case-study-label">Key decision</div>
+                <p class="case-study-text">
+                  Chose a desktop stack to explore local storage, encryption patterns, and WinForms
+                  UI conventions — showing language versatility outside the browser without
+                  misrepresenting it as a web project.
+                </p>
+              </div>
+              <div class="case-study-step">
+                <div class="case-study-label">What I learned</div>
+                <p class="case-study-text">
+                  How desktop apps handle data persistence and user input differently from web apps,
+                  and why labeling project type honestly matters on a frontend-focused portfolio.
+                </p>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         CONTACT
+    ══════════════════════════════════════════ -->
+    <section id="contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Connect</span>
+          <h2 class="section-title">Contact</h2>
+        </div>
+
+        <div class="contact-panel">
+          <p class="contact-intro">
+            Open to remote and hybrid frontend roles, internships, and collaborations.
+            Reach out by email or connect on LinkedIn.
+          </p>
+
+          <ul class="contact-list">
+            <li class="contact-item">
+              <span class="contact-label">Email</span>
+              <a href="mailto:hamdiaawan72@gmail.com" class="contact-value">
+                hamdiaawan72@gmail.com
+              </a>
+            </li>
+            <li class="contact-item">
+              <span class="contact-label">GitHub</span>
+              <a href="https://github.com/hamdiaawan" target="_blank" rel="noopener noreferrer"
+                 class="contact-value">github.com/hamdiaawan</a>
+            </li>
+            <li class="contact-item">
+              <span class="contact-label">LinkedIn</span>
+              <a href="https://www.linkedin.com/in/hamdiaawan" target="_blank" rel="noopener noreferrer"
+                 class="contact-value">linkedin.com/in/hamdiaawan</a>
+            </li>
+            <li class="contact-item">
+              <span class="contact-label">Location</span>
+              <span class="contact-value">Multan, Pakistan</span>
+            </li>
+          </ul>
+
+          <div class="contact-actions">
+            <a href="mailto:hamdiaawan72@gmail.com" class="btn btn-primary">Send Email</a>
+            <div class="social-links">
+              <a href="https://www.linkedin.com/in/hamdiaawan" target="_blank" rel="noopener noreferrer"
+                 class="social-icon" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                </svg>
+              </a>
+              <a href="https://github.com/hamdiaawan" target="_blank" rel="noopener noreferrer"
+                 class="social-icon" aria-label="GitHub">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════ -->
+  <footer>
+    <div class="container footer-content">
+      <p>&copy; 2026 Hamdia Saleem</p>
+      <p>Built with HTML, CSS &amp; JavaScript</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
