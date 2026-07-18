@@ -887,32 +887,42 @@ footer {
   .logo { order: 1; }
   .nav-actions { order: 2; margin-left: auto; }
 
-  .nav-menu {
+  /* IMPORTANT: must use "nav.nav-menu" to override the desktop rule
+     which is also "nav.nav-menu" (higher specificity than ".nav-menu").
+     Without matching the tag, border-radius:9999px always wins. */
+  nav.nav-menu {
     order: 4;
     display: none;
-    position: absolute;
-    top: calc(100% + 0.5rem);
-    left: clamp(1.25rem, 4vw, 2rem);
-    right: clamp(1.25rem, 4vw, 2rem);
+    position: fixed;               /* fixed = relative to viewport, not photo */
+    top: var(--header-h);          /* sits exactly below the sticky header */
+    left: 0;
+    right: 0;
+    width: 100%;
     flex-direction: column;
-    align-items: stretch;          /* full-width links */
-    padding: 0.5rem;
-    gap: 0.25rem;
-    border-radius: 14px;           /* rectangular card, NOT pill */
-    box-shadow: var(--shadow-md);
-    background: var(--surface);    /* #E4DACB warm beige */
-    border: 1px solid var(--border);
-    z-index: 200;
+    align-items: stretch;
+    padding: 0.5rem 1rem;
+    gap: 0.2rem;
+    border-radius: 0;              /* NO pill, NO blob — flat full-width panel */
+    border-top: none;
+    border-bottom: 1px solid var(--border);
+    border-left: none;
+    border-right: none;
+    box-shadow: 0 8px 24px rgba(42, 31, 31, 0.13);
+    background: #E4DACB;           /* solid surface color — no photo shows through */
+    z-index: 999;                  /* above everything including hero photo */
   }
-  .nav-menu.active { display: flex; }
+  nav.nav-menu.active { display: flex; }
 
   .nav-link {
     text-align: left;
-    padding: 0.8rem 1.1rem;
-    border-radius: 10px;           /* subtle rounding per link, not pill */
+    padding: 0.9rem 1rem;
+    border-radius: 8px;
     width: 100%;
     display: block;
+    border-bottom: 1px solid rgba(42, 31, 31, 0.06);
   }
+  .nav-link:last-child { border-bottom: none; }
+
   .menu-toggle { display: block; }
   .nav-cta { display: none; }
   .nav-social { display: none; }
