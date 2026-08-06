@@ -15,9 +15,10 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Outfit:wght@600;700;800&display=swap">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Outfit:wght@600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Outfit:wght@600;700;800&display=swap"></noscript>
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.min.css">
 </head>
 <body>
 
@@ -90,15 +91,20 @@
             PHOTO: place your file at  assets/profile.jpg
             (same folder as index.html — e.g. portfolio/assets/profile.jpg)
           -->
-          <img
-            src="assets/profile.jpg"
-            alt="Hamdia Saleem"
-            class="hero-photo"
-            width="580"
-            height="760"
-            loading="eager"
-            id="hero-photo-img"
-          >
+          <picture>
+            <source srcset="assets/profile.webp" type="image/webp">
+            <img
+              src="assets/profile.jpg"
+              alt="Hamdia Saleem"
+              class="hero-photo"
+              width="580"
+              height="760"
+              loading="eager"
+              fetchpriority="high"
+              decoding="async"
+              id="hero-photo-img"
+            >
+          </picture>
         </div>
 
         <!-- RIGHT: Content -->
